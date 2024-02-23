@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Website</title>
+<style>
+  form {
+    margin-right: 120px;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+  }
+
+  /* CSS for input fields */
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+   background-color:transparent;
+  }
+
+  /* CSS for submit button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color:blue;
+  }
+  /* CSS for background video */
+  #bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+  
+  /* CSS for navbar */
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* CSS for sections */
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+  }
+
+  /* CSS for parallax effect */
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* CSS for content containers */
+  .container {
+    width:80%;
+    padding: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-color: transparent;
+    color:white;
+  }
+  #video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  #video-overlay iframe {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Ensure video covers entire iframe */
+  }
+  
+</style>
+</head>
+<body>
+
+<div id="video-overlay">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/B1TRRiLOw0Q?autoplay=1&controls=0&showinfo=0&autohide=1&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="navbar">
+  <a href="#about">About</a>
+  <a href="#media">Media</a>
+  <a href="#news">News</a>
+  <a href="#purchase">Purchase</a>
+  <a href="#social-media">Social Media</a>
+  <a href="#contact-us">Contact Us</a>
+  <a href="#community">Community</a>
+</div>
+
+<section id="about" class="parallax" style="background-image: url('about-background.jpg');">
+  <div class="container">
+    <!-- About Content -->
+    <h2>About</h2>
+    <p><h3>Introducing Skater Republic, the thrilling upcoming arcade game that puts you right in the heart of a dynamic skateboarding adventure! Explore expansive skateparks, bustling cityscapes, and renowned real-life locations for an immersive experience like no other.<br/> Featuring intuitive controls, a sophisticated trick system, and a compelling progression framework, players will find themselves immersed in a world where every achievement feels truly gratifying. Keep an eye out as we work diligently to bring this extraordinary gaming experience to life</h3></p>
+    <p><h3>Introducing Skater Republic, the thrilling upcoming arcade game that puts you right in the heart of a dynamic skateboarding adventure! Explore expansive skateparks, bustling cityscapes, and renowned real-life locations for an immersive experience like no other.<br/> Featuring intuitive controls, a sophisticated trick system, and a compelling progression framework, players will find themselves immersed in a world where every achievement feels truly gratifying. Keep an eye out as we work diligently to bring this extraordinary gaming experience to life</h3></p>  
+</div>
+</section>
+
+<section id="media" class="parallax" style="background-image: url('media-background.jpg');">
+  <div class="container">
+    <!-- Media Content -->
+    <h2>Media</h2>
+    <div class="video-container">
+      <!-- Game clips go here -->
+      <video controls width="400">
+        <source src="game1.mp4" type="video/mp4" alt="demo game-video 1 is loading">
+        Your browser does not support HTML5 video.
+      </video>
+      <video controls width="400">
+        <source src="game2.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section id="news" class="parallax" style="background-image: url('news-background.jpg');">
+  <div class="container">
+    <!-- News Content -->
+    <h2>News</h2>
+    <p><h3>Latest news and updates go here.</h3></p>
+<p><h3>Introducing Skater Republic, the thrilling upcoming arcade game that puts you right in the heart of a dynamic skateboarding adventure! Explore expansive skateparks, bustling cityscapes, and renowned real-life locations for an immersive experience like no other.<br/> Featuring intuitive controls, a sophisticated trick system, and a compelling progression framework, players will find themselves immersed in a world where every achievement feels truly gratifying. Keep an eye out as we work diligently to bring this extraordinary gaming experience to life</h3></p>
+  </div>
+</section>
+
+<section id="purchase" class="parallax" style="background-image: url('purchase-background.jpg');">
+  <div class="container">
+    <!-- Purchase Content -->
+    <h2>Purchase</h2>
+    <form>
+      <label for="country">Country:</label><br>
+      <input type="text" id="country" name="country"><br>
+      <label for="stream">Stream:</label><br>
+      <input type="text" id="stream" name="stream"><br>
+      <label for="digital-edition">Digital Edition:</label><br>
+      <input type="text" id="digital-edition" name="digital-edition"><br><br>
+      <button type="submit">Purchase</button>
+    </form>
+  </div>
+</section>
+
+<section id="social-media" class="parallax" style="background-image: url('social-media-background.jpg');">
+  <div class="container">
+    <!-- Social Media Content -->
+    <h2>Social Media</h2>
+    <div class="social-container">
+      <!-- Links to games -->
+      <a href="game1-link">Game 1</a>
+      <a href="game2-link">Game 2</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact-us" class="parallax" style="background-image: url('contact-background.jpg');">
+  <div class="container">
+    <!-- Contact Us Content -->
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="location">Location:</label><br>
+      <input type="text" id="location" name="location"><br>
+      <label for="feedback">Feedback:</label><br>
+      <textarea id="feedback" name="feedback"></textarea><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<section id="community" class="parallax" style="background-image: url('community-background.jpg');">
+  <div class="container">
+    <!-- Community Content -->
+    <h2>Community</h2>
+    <p>Join our community for exclusive benefits.</p>
+    <button style="background-color:blue; width:20%;align:center">Join Us</button>
+  </div>
+</section>
+
+<script>
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
